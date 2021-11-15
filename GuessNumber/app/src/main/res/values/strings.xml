@@ -8,5 +8,7 @@
     <string name="more">Перебор :(</string>
     <string name="less">Маловато :(</string>
     <string name="error">Ошибка! Нужно число от 0 до 5</string>
+    <string name="popit">Попыток: 5</string>
+    <string name="lost">Потрачено</string>
 
 </resources>

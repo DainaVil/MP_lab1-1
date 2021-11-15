@@ -27,6 +27,19 @@
         </TableRow>
 
         <TableRow
+            android:paddingTop="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/popitTxt"
+                android:layout_width="336dp"
+                android:layout_height="wrap_content"
+                android:text="@string/popit"
+                android:textAppearance="@style/TextAppearance.AppCompat.Small" />
+        </TableRow>
+
+        <TableRow
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:paddingTop="10dp">
