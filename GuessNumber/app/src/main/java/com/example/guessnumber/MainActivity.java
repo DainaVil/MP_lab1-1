@@ -3,6 +3,7 @@ package com.example.guessnumber;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import android.view.ContextMenu;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -20,6 +21,8 @@ public class MainActivity extends AppCompatActivity {
 
     Random random = new Random();
 
+    final int MENU_ANSWER = 1;
+
     private int number, trys, level;
 
 
@@ -34,6 +37,9 @@ public class MainActivity extends AppCompatActivity {
         subButton = (Button) findViewById(R.id.button);
         newButton = (Button) findViewById(R.id.newbutton);
 
+        registerForContextMenu(infoTxt);
+        registerForContextMenu(trysTxt);
+
         number = random.nextInt(5);
         level = 1;
         trys = 5;
@@ -43,6 +49,18 @@ public class MainActivity extends AppCompatActivity {
         getMenuInflater().inflate(R.menu.menus, menu);
         return super.onCreateOptionsMenu(menu);
     }
+
+    @Override
+    public void onCreateContextMenu(ContextMenu menu, View v,
+                                    ContextMenu.ContextMenuInfo menuInfo) {
+        // TODO Auto-generated method stub
+        switch (v.getId()) {
+            case R.id.infoTxt:
+                menu.add(0, MENU_ANSWER, 0, "Ответ: "+ number);
+                break;
+        }
+    }
+
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {

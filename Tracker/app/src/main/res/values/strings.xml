@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Habit Tracker</string>
+    <string name="buttontext">Добавить</string>
+    <string name="newhabit">Привычка</string>
+</resources>

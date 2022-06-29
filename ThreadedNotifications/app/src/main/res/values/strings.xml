@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Exam</string>
+    <string name="channel_name">"My Channel"</string>
+    <string name="channel_desc">"Description"</string>
+</resources>
